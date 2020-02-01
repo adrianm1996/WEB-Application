@@ -1,0 +1,11 @@
+<h2>My Clubs</h2>
+
+<ul class="clubs">
+  <li *ngFor="let club of clubs"
+    [class.selected]="club === selectedClub"
+    (click)="onSelect(club)">
+    <span class="badge">{{club.id}}</span> {{club.name}}
+  </li>
+</ul>
+
+<app-club-detail [club]="selectedClub"></app-club-detail>
